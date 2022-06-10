@@ -1,0 +1,95 @@
+body{
+    color: red;
+}
+
+.day   { background: #eee; color: black; }
+.night { background: #333; color: white; }
+
+.mobile, .desktop{
+    display: none;
+}
+
+
+@media (orientation: portrait) {
+    .title {
+        color: rgb(246, 62, 191);
+        background-color: black;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .mobile{
+        display:inline-block;
+    }
+}
+
+@media (orientation: landscape) {
+    .subtitle {
+        color: green;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .desktop{
+        display: inline-block
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .day.dark-scheme   { background:  #333; color: white; }
+    .night.dark-scheme { background: black; color:  #ddd; }
+}
+
+@media (prefers-color-scheme: light) {
+    .day.light-scheme   { background: white; color:  #555; }
+    .night.light-scheme { background:  #eee; color: black; }
+}
+
+.container {
+    display: flex;
+    min-height: 25vh;
+    min-width: 25vh;
+    justify-content: space-evenly;
+}
+
+.box {
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    padding: 70px;
+}
+
+.box1 { background: #7f6003; }
+.box2 { background: #f25034; }
+.box3 { background: #3c67ea; }
+.box4 { background: #ff4757; }
+
+.day, .night {
+    display: inline-block;
+    padding: 1em;
+    width: 7em;
+    height: 2em;
+    vertical-align: middle;
+}
+
+
+
+
+/* @media (prefers-color-scheme: dark) {
+    *{
+        background-color: black;
+    }
+    h1 {
+        color: white;
+    }
+
+
+    /* // Style to apply in light mode ONLY */
+/* } */
+
+/* @media (prefers-color-scheme: light) { */
+
+    /* // Style ONLY applied in light mode */
+/* } */ 
